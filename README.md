@@ -33,7 +33,7 @@ To model prediabetes using logistic regression, our analysis will include the es
 
 #### Link to project
 
-- [Link to notebook 1]()
+- [Prediabetes Predictive Model Notebook](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_model_capstone.ipynb)
 
 
 ##### Contact and Further Information
