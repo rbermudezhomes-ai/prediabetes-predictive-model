@@ -1,5 +1,7 @@
 ### Predictive Modeling for Prediabetes Detection
 
+**Berkeley Haas Capstone Project**
+
 **Author: Rommel Bermudez**
 
 #### Executive summary
