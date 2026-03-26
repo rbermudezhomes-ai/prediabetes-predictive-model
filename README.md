@@ -38,7 +38,7 @@ To address the extreme 1:46 class imbalance, we implemented an automated Optimiz
 #### Results
 To identify the most reliable screening tool, we benchmarked our optimized pipeline against a Random Forest model. The Optimized Logistic Regression was the clear winner for clinical application.
 
-- While a standard Random Forest model only identified 6% of prediabetic cases, our tuned pipeline achieved a 0.90 Recall, successfully capturing 9 out of 10 at-risk individuals.
+- While Random Forest, a more powerful non-linear model, only identified 6% of prediabetic cases, our tuned pipeline achieved a 0.90 Recall, successfully capturing 9 out of 10 at-risk individuals.
 
 - We achieved this high sensitivity by prioritizing Patient Capture over Accuracy. In a medical screening context, we deliberately accepted a lower accuracy (30%) to ensure that high-risk patients are not "missed" by the system.
 
