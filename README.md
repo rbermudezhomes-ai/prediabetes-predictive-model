@@ -1,10 +1,12 @@
-### Predictive Modeling for Prediabetes Detection
+### Predictive Screening Model for Prediabetes Detection
 
-**Berkeley Haas Capstone Project** [March 2026]
+**Berkeley Haas Capstone Project** 
 
 **Author: Rommel Bermudez**
 
-#### Executive summary
+March 2026
+
+#### Executive Summary
 
 **The Challenge:** Prediabetes (Class 1) is a critical "window of opportunity" for medical intervention, yet it is difficult to detect. In standard predictive models, this group is often overlooked resulting in a zero detection rate because their health markers are easily confused with healthy individuals.
 
@@ -31,12 +33,34 @@ The Kaggle Diabetes Dataset - https://www.kaggle.com/datasets/alexteboul/diabete
 
 To model prediabetes using Logistic Regression, our analysis will include the essential steps to prepare the dataset with exploratory data analysis (EDA), data cleaning and preprocessing, visual plotting, feature interaction, binning, and feature engineering. We will also apply normalization, using techniques like StandardScaler to handle features on different scales. To identify the most significant risk factors—such as High Blood Pressure, BMI, and High Cholesterol—we utilized both Model Coefficients and Permutation Feature Importance. This dual approach integrates feature evaluation directly into the modeling process. By applying L2 Regularization, we penalized less impactful variables to prevent overfitting while simultaneously highlighting the predictive strength of our primary clinical indicators. Finally, we will evaluate the model’s performance using the Classification Report to calculate accuracy, precision, recall and the F1-score. Additionally, the Confusion Matrix and the ROC Curve (ROC-AUC) will be used to measure the model's overall ability to distinguish between prediabetic and healthy individuals.
 
+To address the extreme 1:46 class imbalance, we implemented an automated Optimization Pipeline that moved beyond manual tuning to prioritize clinical sensitivity. By systematically evaluating thousands of combinations of SMOTE oversampling and Strategic Undersampling, we engineered an optimized training ratio that provided the model with a stronger signal for the minority class. This rigorous mathematical "stress test" ensured the model remained stable while achieving a 90% Recall rate, transforming a difficult diagnostic hurdle into a robust patient screening tool.
 
-#### Link to project
 
-- **Final Version** -[Predictive Modeling for Prediabetes Detection](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_capstone_project.ipynb)
-<br><br>
-- Initial Version 1 - [Prediabetes Predictive Modeling Jupyter Notebook](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_model_capstone_v1.ipynb)
+#### Results
+To identify the most reliable screening tool, we benchmarked our optimized pipeline against a Random Forest model. The Optimized Logistic Regression was the clear winner for clinical application.
+
+- While a standard Random Forest model only identified 6% of prediabetic cases, our tuned pipeline achieved a 0.90 Recall, successfully capturing 9 out of 10 at-risk individuals.
+
+- We achieved this high sensitivity by prioritizing Patient Capture over Accuracy. In a medical screening context, we deliberately accepted a lower accuracy (30%) to ensure that high-risk patients are not "missed" by the system.
+
+- Using a 3-fold Grid Search, we proved that a triple strategy — combining SMOTE, Undersampling, and Custom Class Weights (1:5:2) — provided the most stable and efficient predictive power for this extreme 1:46 imbalance.
+
+#### Next Steps
+While our current model excels at identifying at-risk individuals (90% Recall), the next phase of development will focus on reducing false alarms and improving the model's "confidence" (Precision).
+
+- Integration of Bio-Markers: To move beyond general health surveys, we aim to incorporate objective clinical data such as HbA1c levels, fasting glucose readings, and insulin sensitivity markers. Adding these biological anchors will allow the model to distinguish between general metabolic stress and true prediabetic progression.
+
+- Advanced Algorithmic Exploration: We will evaluate more complex architectures — such as XGBoost, LightGBM, or Neural Networks — using the high-sensitivity baseline we’ve already established. These models may better capture the non-linear "tipping points" in patient data that simpler models might miss.
+
+- Precision-Recall Optimization: Our primary goal is to tighten the decision boundary. By refining our Grid Search to balance high sensitivity with better precision, we can reduce the number of false positives, ensuring that clinical resources are directed toward the patients with the highest verifiable risk.
+
+
+#### Link to Project
+
+- **Final Version** -[Predictive Screening Model for Prediabetes Detection] (https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_capstone_project.ipynb)
+  
+- Version1 - [Prediabetes Predictive Modeling Jupyter Notebook](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_model_capstone_v1.ipynb)
+
 
 ##### Contact and Further Information
 
