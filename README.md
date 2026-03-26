@@ -43,6 +43,8 @@ To identify the most reliable screening tool, we benchmarked our optimized pipel
 - We achieved this high sensitivity by prioritizing Patient Capture over Accuracy. In a medical screening context, we deliberately accepted a lower accuracy (30%) to ensure that high-risk patients are not "missed" by the system.
 
 - Using a 3-fold Grid Search, we proved that a triple strategy — combining SMOTE, Undersampling, and Custom Class Weights (1:5:2) — provided the most stable and efficient predictive power for this extreme 1:46 imbalance.
+  
+- The analysis identifies Age, General Health, and Blood Pressure as the most critical determinants for maximizing prediabetes detection (Recall)
 
 #### Next Steps
 While our current model excels at identifying at-risk individuals (90% Recall), the next phase of development will focus on reducing false alarms and improving the model's "confidence" (Precision).
