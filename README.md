@@ -67,5 +67,3 @@ While our current model excels at identifying at-risk individuals (90% Recall), 
 Rommel Bermudez
 
 bermudez_homes@comcast.net
-
-+1 925 421 3669
