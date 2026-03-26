@@ -10,13 +10,13 @@ March 2026
 
 **The Challenge:** Prediabetes (Class 1) is a critical "window of opportunity" for medical intervention, yet it is difficult to detect. In standard predictive models, this group is often overlooked resulting in a zero detection rate because their health markers are easily confused with healthy individuals.
 
-**The Solution:** We developed a specialized Logistic Regression model using the UCI dataset, specifically optimized to find the "invisible" prediabetic population. We expanded the feature space by introducing 6 new experimental feature interactions such as BMI Risk Level, Metabolic Index, Early Warnings, Physical Fragility, Pre-Risk Score and Stress Score, to test if composite metrics could better surface subtle diagnostic signals within the prediabetic class.
+**The Solution:** We developed a specialized Logistic Regression model using the UCI-Kaggle dataset, specifically optimized to find the "invisible" prediabetic population. We expanded the feature space by introducing 6 new experimental feature interactions such as BMI Risk Level, Metabolic Index, Early Warnings, Physical Fragility, Pre-Risk Score and Stress Score, to test if composite metrics could better surface subtle diagnostic signals within the prediabetic class.
 
-Our model prioritizes **Recall as the primary success metric** to ensure maximum sensitivity. In a prediabetes screening context, the objective is to capture the 'invisible' at-risk population. A high-recall approach minimizes False Negatives, ensuring that individuals who require early intervention are not overlooked by the system.
+Our model prioritizes __Recall as the primary success metric__ to ensure maximum sensitivity. In a prediabetes screening context, the objective is to capture the "invisible" at-risk population. A high-recall approach minimizes False Negatives, ensuring that individuals who require early intervention are not overlooked by the system.
 
 #### Rationale
 
-Prediabetes is defined as higher blood sugar level than normal, but not high enough to be diagnosed as Type 2 Diabetes. Approximately 98 million American adults have prediabetes, and 8 in 10 adults do not know that they have the condition.
+Prediabetes is defined as higher blood sugar level than normal, but not high enough to be diagnosed as Type 2 Diabetes. Approximately __98 million American adults__ have prediabetes, yet __8 in 10 adults__ remain unaware of their condition.
 
 The early detection of prediabetes is especially important because prediabetes represents a reversible stage where lifestyle changes can successfully avoid permanent systemic complications. Early intervention can reduce the risk of progressing to Type 2 Diabetes (T2D). Early detection reduces the staggering healthcare burden associated with treating T2D complications, such as kidney failure, blindness, and cardiovascular disease.
 
@@ -32,19 +32,19 @@ The diabetes dataset is available in the UC Irvine repository - https://archive.
 
 To model prediabetes using Logistic Regression, our analysis will include the essential steps to prepare the dataset with exploratory data analysis (EDA), data cleaning and preprocessing, visual plotting, feature interaction, binning, and feature engineering. We will also apply normalization, using techniques like StandardScaler to handle features on different scales. To identify the most significant risk factors—such as High Blood Pressure, BMI, and High Cholesterol—we utilized both Model Coefficients and Permutation Feature Importance. This dual approach integrates feature evaluation directly into the modeling process. By applying L2 Regularization, we penalized less impactful variables to prevent overfitting while simultaneously highlighting the predictive strength of our primary clinical indicators. Finally, we will evaluate the model’s performance using the Classification Report to calculate accuracy, precision, recall and the F1-score. Additionally, the Confusion Matrix and the ROC Curve (ROC-AUC) will be used to measure the model's overall ability to distinguish between prediabetic and healthy individuals.
 
-To address the extreme 1:46 class imbalance, we implemented an automated Optimization Pipeline that moved beyond manual tuning to prioritize clinical sensitivity. By systematically evaluating thousands of combinations of SMOTE oversampling and Strategic Undersampling, we engineered an optimized training ratio that provided the model with a stronger signal for the minority class. This rigorous mathematical "stress test" ensured the model remained stable while achieving a 90% Recall rate, transforming a difficult diagnostic hurdle into a robust patient screening tool.
+To address the __extreme 1:46 class imbalance__, we implemented an automated Optimization Pipeline that moved beyond manual tuning to prioritize clinical sensitivity. By systematically evaluating thousands of combinations of SMOTE oversampling and Strategic Undersampling, we engineered an optimized training ratio that provided the model with a stronger signal for the minority class. This rigorous mathematical "stress test" ensured the model remained stable while achieving a 90% Recall rate, transforming a difficult diagnostic hurdle into a robust patient screening tool.
 
 
 #### Results
 To identify the most reliable screening tool, we benchmarked our optimized pipeline against a Random Forest model. The Optimized Logistic Regression was the clear winner for clinical application.
 
-- While Random Forest, a more powerful non-linear model, only identified 6% of prediabetic cases, our tuned pipeline achieved a 0.90 Recall, successfully capturing 9 out of 10 at-risk individuals.
+- While Random Forest, a more powerful non-linear model, only identified 6% of prediabetic cases, our tuned pipeline achieved a __0.90 Recall__, successfully capturing 9 out of 10 at-risk individuals.
 
 - We achieved this high sensitivity by prioritizing Patient Capture over Accuracy. In a medical screening context, we deliberately accepted a lower accuracy (30%) to ensure that high-risk patients are not "missed" by the system.
 
 - Using a 3-fold Grid Search, we proved that a triple strategy — combining SMOTE, Undersampling, and Custom Class Weights (1:5:2) — provided the most stable and efficient predictive power for this extreme 1:46 imbalance.
   
-- The analysis identifies Age, General Health, and Blood Pressure as the most critical determinants for maximizing prediabetes detection (Recall)
+- The analysis identifies __Age, General Health, and Blood Pressure__ as the most critical determinants for maximizing prediabetes detection (Recall)
 
 #### Next Steps
 While our current model excels at identifying at-risk individuals (90% Recall), the next phase of development will focus on reducing false alarms and improving the model's "confidence" (Precision).
