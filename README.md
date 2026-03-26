@@ -26,8 +26,7 @@ How accurately can a machine learning model predict the early sign of prediabete
 
 #### Data Sources
 
-The diabetes dataset is available in the UC Irvine repository - https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators. The data contains health information, survey data, and demographics about people along with their diagnosis of prediabetes/diabetes. The person's weight, age, clinical biomarkers, and lifestyle habits are among the determinants of prediabetes risk.
-The Kaggle Diabetes Dataset - https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset is the version that contains the Multiclass Classification with Target 0, 1, 2. We will use this version in our Predictive Modeling.
+The diabetes dataset is available in the UC Irvine repository - https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators. The data contains health information, survey data, and demographics about people along with their diagnosis of prediabetes/diabetes. The person's weight, age, clinical biomarkers, and lifestyle habits are among the determinants of prediabetes risk. The Kaggle Diabetes Dataset - https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset is the version that contains the Multiclass Classification with Target 0, 1, 2 whereas the UCI version is a Binary Classification that contains the Target 0, 1. We will use the Kaggle version in our Predictive Modeling. The UCI and Kaggle datasets share an identical feature architecture.
  
 #### Methodology
 
