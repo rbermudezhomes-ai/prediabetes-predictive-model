@@ -58,9 +58,9 @@ While our current model excels at identifying at-risk individuals (90% Recall), 
 
 #### Link to Project
 
-- **Final Capstone Project** - [Predictive Screening Model for Prediabetes Detection](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_capstone_project.ipynb) Jupyter Notebook
+- **Final Capstone Project Jupyter Notebook** - [Predictive Screening Model for Prediabetes Detection](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_capstone_project.ipynb)
   
-- Initial Draft Version - Feb 2026 - [Prediabetes Predictive Modeling](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_model_capstone_v1.ipynb) Jupyter Notebook
+- Initial Draft Version - Feb 2026 Jupyter Notebook - [Prediabetes Predictive Modeling](https://github.com/rbermudezhomes-ai/prediabetes-predictive-model/blob/main/prediabetes_model_capstone_v1.ipynb)
 
 
 ##### Contact and Further Information
